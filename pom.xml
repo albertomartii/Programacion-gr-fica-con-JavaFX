@@ -58,7 +58,6 @@
             <artifactId>atlantafx-base</artifactId>
             <version>2.0.1</version>
         </dependency>
-
     </dependencies>
 
     <build>
@@ -78,11 +77,10 @@
                 <version>0.0.8</version>
                 <executions>
                     <execution>
-                        <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                org.ieselcaminas.conversor.pasoapaso/org.ieselcaminas.conversor.pasoapaso.HelloApplication
+                                org.ieselcaminas.conversor/org.ieselcaminas.conversor.MainApp
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>

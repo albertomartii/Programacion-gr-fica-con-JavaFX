@@ -1,0 +1,175 @@
+/* =============================================
+   VARIABLES GLOBALES
+   ============================================= */
+.root {
+    -fx-font-family: "Segoe UI", Arial, sans-serif;
+    -fx-font-size: 14px;
+    -fx-background-color: #f4f4f4;
+
+    /* Colores personalizados reutilizables */
+    color-primario:   #2c7be5;
+    color-secundario: #6c757d;
+    color-peligro:    #e63757;
+    color-fondo:      #f4f4f4;
+}
+
+💡 /*Las variables definidas en .root se pueden referenciar en cualquier selector con color-primario (sin var() como en CSS web).*/
+
+    /*=============================================
+VARIABLES
+============================================= */
+
+.root {
+    -fx-font-family: "Segoe UI", Arial, sans-serif;
+    -fx-font-size: 14px;
+    color-primario:   #2c7be5;
+    color-exito:      #00d97e;
+    color-peligro:    #e63757;
+    color-fondo:      #f4f4f4;
+    color-texto:      #1a1a2e;
+}
+
+/* =============================================
+   VENTANA / CONTENEDORES
+   ============================================= */
+.fondo-principal {
+    -fx-background-color: color-fondo;
+    -fx-padding: 20px;
+    -fx-spacing: 10px;
+}
+
+.tarjeta {
+    -fx-background-color: white;
+    -fx-background-radius: 8px;
+    -fx-border-color: #dee2e6;
+    -fx-border-radius: 8px;
+    -fx-border-width: 1px;
+    -fx-padding: 20px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 8, 0, 0, 2);
+}
+
+/* =============================================
+   TIPOGRAFÍA
+   ============================================= */
+.titulo {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: color-texto;
+}
+
+.subtitulo {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: color-texto;
+}
+
+.texto-secundario {
+    -fx-font-size: 12px;
+    -fx-text-fill: color-secundario;
+}
+
+/* =============================================
+   BOTONES
+   ============================================= */
+.boton-primario {
+    -fx-background-color: color-primario;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 6px;
+    -fx-padding: 8px 20px;
+    -fx-cursor: hand;
+}
+
+.boton-primario:hover {
+    -fx-background-color: #1a68d1;   /* tono más oscuro */
+}
+
+.boton-primario:pressed {
+    -fx-background-color: #1558b0;
+    -fx-scale-x: 0.97;
+    -fx-scale-y: 0.97;
+}
+
+.boton-primario:disabled {
+    -fx-opacity: 0.5;
+    -fx-cursor: default;
+}
+
+.boton-peligro {
+    -fx-background-color: color-peligro;
+    -fx-text-fill: white;
+    -fx-background-radius: 6px;
+    -fx-padding: 8px 20px;
+    -fx-cursor: hand;
+}
+
+.boton-peligro:hover {
+    -fx-background-color: #c0392b;
+}
+
+/* =============================================
+   CAMPOS DE TEXTO
+   ============================================= */
+.campo-texto {
+    -fx-background-color: white;
+    -fx-border-color: #ced4da;
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+    -fx-border-width: 1px;
+    -fx-padding: 8px 12px;
+}
+
+.campo-texto:focused {
+    -fx-border-color: color-primario;
+    -fx-border-width: 2px;
+    /* Efecto de sombra azul al hacer foco */
+    -fx-effect: dropshadow(gaussian, rgba(44,123,229,0.25), 6, 0, 0, 0);
+}
+
+.campo-texto-error {
+    -fx-border-color: color-peligro;
+    -fx-border-width: 2px;
+}
+
+/* =============================================
+   TABLA (TableView)
+   ============================================= */
+.tabla-datos {
+    -fx-background-color: white;
+    -fx-border-color: #dee2e6;
+    -fx-border-radius: 8px;
+}
+
+.tabla-datos .column-header {
+    -fx-background-color: #f8f9fa;
+    -fx-font-weight: bold;
+    -fx-text-fill: color-texto;
+    -fx-padding: 10px;
+}
+
+.tabla-datos .table-row-cell:odd {
+    -fx-background-color: #fafafa;
+}
+
+.tabla-datos .table-row-cell:selected {
+    -fx-background-color: derive(color-primario, 80%);
+    -fx-text-fill: color-texto;
+}
+
+/* =============================================
+   BARRA DE MENÚ
+   ============================================= */
+.barra-menu {
+    -fx-background-color: #1a1a2e;
+    -fx-padding: 0;
+}
+
+.barra-menu .menu {
+    -fx-text-fill: white;
+    -fx-padding: 8px 16px;
+}
+
+.barra-menu .menu:hover,
+.barra-menu .menu:showing {
+    -fx-background-color: color-primario;
+}

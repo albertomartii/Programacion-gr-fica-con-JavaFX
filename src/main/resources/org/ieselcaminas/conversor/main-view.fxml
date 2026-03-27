@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="TOP_CENTER" spacing="20"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="org.ieselcaminas.conversor.ConverterController">
+
+    <padding>
+        <Insets top="32" right="36" bottom="32" left="36"/>
+    </padding>
+
+    <!-- ── Header ── -->
+    <VBox alignment="CENTER" spacing="4">
+        <Label text="Conversor de Distancias" styleClass="title-label"/>
+        <Label text="Millas  ↔  Kilómetros"/>
+    </VBox>
+
+    <Separator/>
+
+    <!-- ── Dos paneles lado a lado ── -->
+    <HBox spacing="16" alignment="CENTER">
+        <HBox.margin>
+            <Insets/>
+        </HBox.margin>
+
+        <!-- Panel Millas → Km -->
+        <VBox spacing="10" styleClass="conversion-panel" HBox.hgrow="ALWAYS">
+            <padding><Insets topRightBottomLeft="16"/></padding>
+
+            <Label text="🏁  Millas  →  Kilómetros" styleClass="panel-title"/>
+            <Label text="Introduce las millas:"/>
+            <TextField fx:id="millasInput" promptText="Ej: 10" maxWidth="Infinity"/>
+            <Button text="Convertir a km" maxWidth="Infinity" onAction="#convertirMillasAKm"/>
+
+            <VBox alignment="CENTER" spacing="2">
+                <Label fx:id="kmResultLabel" text="—" styleClass="result-label"/>
+                <Label text="kilómetros"/>
+            </VBox>
+        </VBox>
+
+        <!-- Panel Km → Millas -->
+        <VBox spacing="10" styleClass="conversion-panel" HBox.hgrow="ALWAYS">
+            <padding><Insets topRightBottomLeft="16"/></padding>
+
+            <Label text="📍  Kilómetros  →  Millas" styleClass="panel-title"/>
+            <Label text="Introduce los kilómetros:"/>
+            <TextField fx:id="kmInput" promptText="Ej: 10" maxWidth="Infinity"/>
+            <Button text="Convertir a millas" maxWidth="Infinity" onAction="#convertirKmAMillas"/>
+
+            <VBox alignment="CENTER" spacing="2">
+                <Label fx:id="millasResultLabel" text="—" styleClass="result-label"/>
+                <Label text="millas"/>
+            </VBox>
+        </VBox>
+
+    </HBox>
+</VBox>
